@@ -19,7 +19,7 @@ It makes use of the product template registry and template extensibility methods
 
 In the current POC, templates can be extended with the following methods:
 
-```
+```php
 // Add a group to the template.  Currently this takes the shape of a tab in the new product UI.
 $template->add_group(
 	array(
@@ -65,7 +65,7 @@ $template = $template_registry->get_registered( 'simple' );
 
 Or you can create a new custom template by extending the `AbstractProductTemplate` class or `BaseProductTemplate` class if you want the base fields.
 
-```
+```php
 class MyCustomTemplate extends AbstractProductTemplate {
 	public function __construct() {
 		$this->add_group( ... );
